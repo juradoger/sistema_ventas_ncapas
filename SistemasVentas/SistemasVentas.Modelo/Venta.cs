@@ -12,7 +12,7 @@ namespace SistemasVentas.Modelo
         public int IdCliente { get; set; }
         public int IdVendedor { get; set; }
         public DateTime fecha { get; set; }
-        public double Total { get; set; }
+        public decimal Total { get; set; }
         public string Estado { get; set; }
     }
 }

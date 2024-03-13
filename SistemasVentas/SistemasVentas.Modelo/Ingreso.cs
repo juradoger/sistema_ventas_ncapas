@@ -11,7 +11,7 @@ namespace SistemasVentas.Modelo
         public int IdIngreso { get; set; }
         public int IdProveedor { get; set; }
         public DateTime FechaIngreso { get; set; }
-        public double Total { get; set; }
+        public decimal Total { get; set; }
         public string Estado { get; set; }
     }
 }

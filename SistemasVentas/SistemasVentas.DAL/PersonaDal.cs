@@ -10,10 +10,14 @@ namespace SistemasVentas.DAL
 {
     public class PersonaDal
     {
+        //funcion es esto public DataTable ListarPersonasDal(), una funcion es un codigo que  se ejecuta y devuelve un tipo de dato, aqui pido que me devuelva con return, ese dato debe ser compatible con el tipo de dato declarado en la funcion
+        //al error cuando devuelves diferentes tipo de datos, se le llama error de compilacion
         public DataTable ListarPersonasDal()
         {
             string consulta = "select * from persona";
-            DataTable lista =
+            //aqui llama a la funcion ejecutardatatabla
+            DataTable lista = Conexion.EjecutarDataTabla(consulta, "tabla");
+            return lista;
         }
     }
 }

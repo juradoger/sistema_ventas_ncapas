@@ -17,7 +17,7 @@ namespace SistemasVentas.DAL
         /// </summary>
         public static string CONECTAR
         {
-            get { return @"Data Source=(local); Initial Catalog=BDTienda; Integrated Security=True; TrustServerCertificate=true;"; }
+            get { return @"Data Source=LAPTOP-8ARPEK3R\SQLNAYELI; Initial Catalog=BDTIENDA; Integrated Security=True; TrustServerCertificate=true;"; }
             //get { return ConfigurationManager.ConnectionStrings["cadena"].ToString(); }
         }
         public static DataSet EjecutarDataSet(string consulta)

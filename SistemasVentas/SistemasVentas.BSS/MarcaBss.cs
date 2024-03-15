@@ -1,4 +1,5 @@
 ﻿using SistemasVentas.DAL;
+using SistemasVentas.Modelo;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -15,5 +16,10 @@ namespace SistemasVentas.BSS
         {
             return dal.ListarMarcaDal();
         }
+        public void InsertarMarcaBss(Marca mar)
+        {
+            dal.InsertarMarcaDal(mar);
+        }
     }
 }
+

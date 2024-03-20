@@ -1,4 +1,5 @@
 ﻿using SistemasVentas.BSS;
+using SistemasVentas.VISTA.ProductoVista;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,11 @@ namespace SistemasVentas.VISTA.TipoProdVistas
         private void TipoProdListarVista_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = bss.ListarTipoProdBss();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ProductoInsertarVista.IdTipoProSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
         }
     }
 }

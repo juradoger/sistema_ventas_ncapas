@@ -21,5 +21,20 @@ namespace SistemasVentas.DAL
             string consulta = $"insert into proveedor values('{p.Nombre.ToString()}', '{p.Telefono.ToString()}','{p.Direccion.ToString()}','Activo')";
             Conexion.Ejecutar(consulta);
         }
+        public Proveedor ObtenerProveedorId(int id)
+        {
+            string consulta = "select * from proveedor where idproveedor=" + id;
+            DataTable tabla = Conexion.EjecutarDataTabla(consulta, "asdas");
+            Proveedor proveedor = new Proveedor();
+            if (tabla.Rows.Count > 0)
+            {
+                proveedor.IdProveedor = Convert.ToInt32(tabla.Rows[0]["idproveedor"]);
+                proveedor.Nombre = tabla.Rows[0]["nombre"].ToString();
+                proveedor.Telefono = tabla.Rows[0]["telefono"].ToString();
+                proveedor.Direccion = tabla.Rows[0]["direccion"].ToString();
+                proveedor.Estado = tabla.Rows[0]["estado"].ToString();
+            }
+            return proveedor;
+        }
     }
 }

@@ -35,7 +35,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -99,15 +98,6 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "TIPO DE CLIENTE:";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(182, 218);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 15);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "TIPO DE CLIENTE:";
-            // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(170, 135);
@@ -121,7 +111,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(462, 450);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -145,7 +134,6 @@
         private Button button1;
         private Button button2;
         private Label label3;
-        private Label label4;
         private TextBox textBox3;
     }
 }

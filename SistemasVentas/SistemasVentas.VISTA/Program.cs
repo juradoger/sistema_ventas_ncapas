@@ -27,20 +27,31 @@ namespace SistemasVentas.VISTA
              Application.Run(new UsuarioRolVistas.UsuarioRolListarVista());
              Application.Run(new VentaVistas.VentaListarVista());*/
             /////Codigo para insertar datos atraves de una consola
-            Application.Run(new PersonaVistas.PersonaInsertarVista());
-            Application.Run(new ClienteVistas.ClienteInsertarVista());
-            Application.Run(new DetalleIngVistas.DetalleIngInsertarVista());
-            Application.Run(new DetalleVentaVistas.DetalleVentaInsertarVista());
-            Application.Run(new IngresoVistas.IngresoInsertarVista());
-            Application.Run(new MarcaVistas.MarcaInsertarVenta());
-            Application.Run(new ProductoVistas.ProductoInsertarVista());
-            Application.Run(new ProveedorVistas.ProveedorInsertarVista());
-            Application.Run(new ProveeVistas.ProveeInsertarVista());
-            Application.Run(new RolVistas.RolInsertarVista());
-            Application.Run(new TipoProdVistas.TipoProdInsertarVista());
-            Application.Run(new UsuarioRolVistas.UsuarioRolInsertarVista());
-            Application.Run(new UsuarioVistas.UsuarioInsertarVista());
-            Application.Run(new VentaVistas.VentaInsertarVista());
+            /*    Application.Run(new PersonaVistas.PersonaInsertarVista());
+                  Application.Run(new ClienteVistas.ClienteInsertarVista());
+                  Application.Run(new DetalleIngVistas.DetalleIngInsertarVista());
+                  Application.Run(new DetalleVentaVistas.DetalleVentaInsertarVista());
+                  Application.Run(new IngresoVistas.IngresoInsertarVista());
+                  Application.Run(new MarcaVistas.MarcaInsertarVenta());
+                  Application.Run(new ProductoVistas.ProductoInsertarVista());
+                  Application.Run(new ProveedorVistas.ProveedorInsertarVista());
+                  Application.Run(new ProveeVistas.ProveeInsertarVista());
+                  Application.Run(new RolVistas.RolInsertarVista());
+                  Application.Run(new TipoProdVistas.TipoProdInsertarVista());
+                  Application.Run(new UsuarioRolVistas.UsuarioRolInsertarVista());
+                  Application.Run(new UsuarioVistas.UsuarioInsertarVista());
+                  Application.Run(new VentaVistas.VentaInsertarVista());*/
+    
+                 //Application.Run(new VentaVistas.VentaInsertarVista());
+            ///aqui van con seleccionar
+         Application.Run(new UsuarioVista.UsuarioInsertarVista1());
+         Application.Run(new ClienteVista.ClienteInsertarVista());
+            //Application.Run(new DetalleIngVista.DetalleIngeVista());
+            //Application.Run(new PersonaVistas.PersonaListarVista());
+            //Application.Run(new DetalleVentaVista.DetalleVentaInsertarVista());
+            //Application.Run(new IngresoVista.IngresoInsertarVista());
+           // Application.Run(new ProductoVista.ProductoInsertarVista());
+          //Application.Run(new VentaVista.VentaInsertarVista());
         }
     }
     

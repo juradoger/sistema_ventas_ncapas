@@ -1,4 +1,5 @@
 ﻿using SistemasVentas.BSS;
+using SistemasVentas.VISTA.VentaVista;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,11 @@ namespace SistemasVentas.VISTA.ClienteVistas
         private void ClienteListarVista_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = bss.ListarClienteBss();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            VentaInsertarVista.IdClienteSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
         }
     }
 }

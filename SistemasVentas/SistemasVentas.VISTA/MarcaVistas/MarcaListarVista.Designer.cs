@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,14 +42,26 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(464, 430);
+            this.dataGridView1.Size = new System.Drawing.Size(464, 406);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // button2
+            // 
+            this.button2.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.button2.Location = new System.Drawing.Point(334, 420);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(145, 26);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "SELECCIONAR";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // MarcaListarVista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(491, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Name = "MarcaListarVista";
             this.Text = "MarcaListarVista";
@@ -61,5 +74,6 @@
         #endregion
 
         private DataGridView dataGridView1;
+        private Button button2;
     }
 }

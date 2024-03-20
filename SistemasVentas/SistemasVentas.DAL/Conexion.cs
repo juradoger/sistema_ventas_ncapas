@@ -10,15 +10,10 @@ namespace SistemasVentas.DAL
 {
     public class Conexion
     {
-        /// <summary>
-        /// Esta clase me ayuda a conectarme con la BD, es una app insegura porque lleva la autenticacion de windows
-        /// En las nuevas versiones, TrustServerCertificate=true; esto dice que es seguro
-        /// aqui va el nombre de la BD que me pidio al instalar, el nombre de mi computaora, Data Source=(local)
-        /// </summary>
+        
         public static string CONECTAR
         {
-            get { return @"Data Source=LAPTOP-8ARPEK3R\SQLNAYELI; Initial Catalog=BDTIENDA; Integrated Security=True; TrustServerCertificate=true;"; }
-            //get { return ConfigurationManager.ConnectionStrings["cadena"].ToString(); }
+            get { return @"Data Source=LAPTOP-8ARPEK3R\SQLNAYELI; Initial Catalog=TIENDABD; Integrated Security=True; TrustServerCertificate=true;"; }
         }
         public static DataSet EjecutarDataSet(string consulta)
         {
@@ -32,7 +27,6 @@ namespace SistemasVentas.DAL
             da.Fill(ds, "TABLA");
             return ds;
         }
-        /// Este metodo me dice que va a recibir una consulta, ese metodo es estatico, y cuando uso una consulta tipo escalar quiere decir que va a devolver un dato escalar o calculado, con funciones como SUM, MAX, MIN, COUNT y AVG
 
         public static void Ejecutar(string consulta)
         {
@@ -42,6 +36,7 @@ namespace SistemasVentas.DAL
             cmd.CommandTimeout = 5000;
             cmd.ExecuteNonQuery();
         }
+
 
         public static int EjecutarEscalar(string consulta)
         {
@@ -61,9 +56,9 @@ namespace SistemasVentas.DAL
             SqlConnection conectar = new SqlConnection(Conexion.CONECTAR);
             SqlCommand cmd = new SqlCommand(consulta, conectar);
             cmd.CommandTimeout = 5000;
-            SqlDataAdapter da = new SqlDataAdapter();//recupera toda la lista o todos los registros que se han hecho
+            SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd;
-            DataTable dt = new DataTable(tabla);//mas legible se puede manipular desde un listview, es manipulable para cualquier entorno
+            DataTable dt = new DataTable(tabla);
             da.Fill(dt);
             return dt;
         }

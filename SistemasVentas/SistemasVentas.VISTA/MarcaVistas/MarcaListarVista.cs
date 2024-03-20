@@ -1,4 +1,5 @@
 ﻿using SistemasVentas.BSS;
+using SistemasVentas.VISTA.ProductoVista;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,11 @@ namespace SistemasVentas.VISTA.MarcaVistas
         private void MarcaListarVista_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = bss.ListarMarcaBss();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ProductoInsertarVista.IdMarcaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
         }
     }
 }

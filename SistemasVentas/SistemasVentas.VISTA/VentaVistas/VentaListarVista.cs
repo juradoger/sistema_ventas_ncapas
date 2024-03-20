@@ -1,4 +1,5 @@
 ﻿using SistemasVentas.BSS;
+using SistemasVentas.VISTA.DetalleVentaVista;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,11 @@ namespace SistemasVentas.VISTA.VentaVistas
         private void ListarVentaVista_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = bss.ListarVentaBss();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DetalleVentaInsertarVista.IdVentaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
         }
     }
 }

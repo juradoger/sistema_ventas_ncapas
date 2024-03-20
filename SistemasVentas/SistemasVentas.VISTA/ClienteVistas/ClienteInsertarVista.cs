@@ -31,5 +31,10 @@ namespace SistemasVentas.VISTA.ClienteVistas
 
             MessageBox.Show("Registro Exitoso!");
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

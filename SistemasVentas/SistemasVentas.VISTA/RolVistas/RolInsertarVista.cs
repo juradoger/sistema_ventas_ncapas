@@ -23,8 +23,14 @@ namespace SistemasVentas.VISTA.RolVistas
         {
             Rol r = new Rol();
             r.Nombre = textBox1.Text;
+            r.Estado = textBox2.Text;
             bss.InsertarRolBss(r);
             MessageBox.Show("Exito!");
+        }
+
+        private void RolInsertarVista_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

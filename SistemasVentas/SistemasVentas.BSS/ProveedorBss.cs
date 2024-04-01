@@ -24,6 +24,14 @@ namespace SistemasVentas.BSS
         {
             return dal.ObtenerProveedorId(id);
         }
+        public void EditarProveedorBss(Proveedor p)
+        {
+            dal.EditarProveedorDal(p);
+        }
+        public void EliminarProveedorBss(int id)
+        {
+            dal.EliminarProveedorDal(id);
+        }
     }
     
 }

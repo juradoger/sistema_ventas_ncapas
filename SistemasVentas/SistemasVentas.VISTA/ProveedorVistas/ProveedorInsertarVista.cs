@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SistemasVentas.VISTA.ProveedorVistas
 {
@@ -25,8 +26,15 @@ namespace SistemasVentas.VISTA.ProveedorVistas
             prov.Nombre = textBox1.Text;
             prov.Telefono = textBox2.Text;
             prov.Direccion = textBox3.Text;
+            prov.Estado= textBox4.Text;
             bss.InsertarProveedorBss(prov);
             MessageBox.Show("Exitoso!");
+         
+        }
+
+        private void ProveedorInsertarVista_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

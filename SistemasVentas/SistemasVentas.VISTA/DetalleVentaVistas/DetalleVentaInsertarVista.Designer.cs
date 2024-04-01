@@ -40,25 +40,27 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 32);
+            this.label1.Location = new System.Drawing.Point(34, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 15);
+            this.label1.Size = new System.Drawing.Size(42, 15);
             this.label1.TabIndex = 0;
-            this.label1.Text = "IDVENTA";
+            this.label1.Text = "VENTA";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 75);
+            this.label2.Location = new System.Drawing.Point(8, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 15);
+            this.label2.Size = new System.Drawing.Size(68, 15);
             this.label2.TabIndex = 1;
-            this.label2.Text = "IDPRODUCTO";
+            this.label2.Text = "PRODUCTO";
             // 
             // label3
             // 
@@ -89,14 +91,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(174, 29);
+            this.textBox1.Location = new System.Drawing.Point(82, 26);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(223, 23);
             this.textBox1.TabIndex = 5;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(174, 67);
+            this.textBox2.Location = new System.Drawing.Point(82, 64);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(223, 23);
             this.textBox2.TabIndex = 6;
@@ -141,11 +143,33 @@
             this.button2.Text = "CANCELAR";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(322, 26);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(114, 23);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "SELECCIONAR";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(322, 64);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(114, 23);
+            this.button4.TabIndex = 13;
+            this.button4.Text = "SELECCIONAR";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // DetalleVentaInsertarVista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(448, 303);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox5);
@@ -160,6 +184,7 @@
             this.Controls.Add(this.label1);
             this.Name = "DetalleVentaInsertarVista";
             this.Text = "DetalleVentaInsertarVista";
+            this.Load += new System.EventHandler(this.DetalleVentaInsertarVista_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,5 +204,7 @@
         private TextBox textBox5;
         private Button button1;
         private Button button2;
+        private Button button3;
+        private Button button4;
     }
 }

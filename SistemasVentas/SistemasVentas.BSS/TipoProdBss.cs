@@ -24,5 +24,14 @@ namespace SistemasVentas.BSS
         {
             return dal.ObtenerIdDal(id);
         }
+        public void EditarTipoProdBss(TipoProducto p)
+        {
+            dal.EditarTipoProdDal(p);
+        }
+        public void EliminarTipoProdBss(int id)
+        {
+            dal.EliminarTipoProdDal(id);
+        }
+
     }
 }

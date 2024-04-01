@@ -32,5 +32,15 @@ namespace SistemasVentas.VISTA.PersonaVistas
 
             MessageBox.Show("Registro Exitoso!");
         }
+
+        private void PersonaInsertarVista_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

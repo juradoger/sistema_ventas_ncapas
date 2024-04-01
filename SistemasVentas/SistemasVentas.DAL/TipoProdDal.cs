@@ -18,14 +18,15 @@ namespace SistemasVentas.DAL
         }
         public void InsertarTipoProdDal(TipoProducto e)
         {
-            string consulta = $"insert into rol values('{e.Nombre.ToString()}', 'Activo')";
+            string consulta = $"insert into tipoprod values('{e.Nombre.ToString()}', 'Activo')";
             Conexion.Ejecutar(consulta);
         }
+        TipoProducto tip = new TipoProducto();
         public TipoProducto ObtenerIdDal(int id)
         {
-            string consulta = "select * from tipoproducto where idtipoprod=" + id;
+            string consulta = "select * from tipoprod where idtipoprod=" + id;
             DataTable tabla = Conexion.EjecutarDataTabla(consulta, "asdas");
-            TipoProducto tip = new TipoProducto();
+            
             if (tabla.Rows.Count > 0)
             {
                 tip.IdTipoProd = Convert.ToInt32(tabla.Rows[0]["idtipoprod"]);
@@ -33,6 +34,18 @@ namespace SistemasVentas.DAL
                 tip.Estado = tabla.Rows[0]["estado"].ToString();
             }
             return tip;
+        }
+        public void EditarTipoProdDal(TipoProducto p)
+        {
+            string consulta = "update tipoprod set nombre='" + p.Nombre + "'," +
+                                                        "estado='" + p.Estado + "' " +
+                                                "where idtipoprod=" + p.IdTipoProd;
+            Conexion.Ejecutar(consulta);
+        }
+        public void EliminarTipoProdDal(int id)
+        {
+            string consulta = "delete from tipoprod where idtipoprod=" + id;
+            Conexion.Ejecutar(consulta);
         }
     }
 }

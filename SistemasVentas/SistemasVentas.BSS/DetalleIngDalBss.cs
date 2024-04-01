@@ -20,5 +20,21 @@ namespace SistemasVentas.BSS
         {
             dal.InsertarDetalleIngDal(detalleIng);
         }
+        public DetalleIng ObtenerDetalleIngIdBss(int id)
+        {
+            return dal.ObtenerDetalleIngIdDal(id);
+        }
+        public void EditarDetalleIngBss(DetalleIng p)
+        {
+            dal.EditarDetalleIngDal(p);
+        }
+        public void EliminarDetalleIngBss(int id)
+        {
+            dal.EliminarDetalleIngDal(id);
+        }
+        public DataTable DetalleIngDatosBss()
+        {
+            return dal.DetalleIngDatosDal();
+        }
     }
 }

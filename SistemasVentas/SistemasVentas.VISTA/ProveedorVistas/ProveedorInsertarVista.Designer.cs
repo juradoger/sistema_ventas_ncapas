@@ -36,6 +36,8 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
@@ -105,11 +107,29 @@
             this.button2.Text = "CANCELAR";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(268, 195);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(201, 23);
+            this.textBox4.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(145, 198);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 15);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "ESTADO";
+            // 
             // ProveedorInsertarVista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox3);
@@ -120,6 +140,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "ProveedorInsertarVista";
             this.Text = "ProveedorInsertarVista";
+            this.Load += new System.EventHandler(this.ProveedorInsertarVista_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,5 +156,7 @@
         private TextBox textBox3;
         private Button button1;
         private Button button2;
+        private TextBox textBox4;
+        private Label label4;
     }
 }

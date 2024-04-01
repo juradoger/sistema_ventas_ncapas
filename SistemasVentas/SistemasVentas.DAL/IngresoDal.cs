@@ -37,5 +37,24 @@ namespace SistemasVentas.DAL
             }
             return ingreso;
         }
+        public void EditarIngresoDal(Ingreso p)
+        {
+            string consulta = "update ingreso set idproveedor=" + p.IdProveedor + "," +
+                                                        "fechaingreso='" + p.FechaIngreso + "'," +
+                                                        "total=" + p.Total + "," +
+                                                        "estado='" + p.Estado + "' " +
+                                                "where idingreso=" + p.IdIngreso;
+            Conexion.Ejecutar(consulta);
+        }
+        public void EliminarIngresoDal(int id)
+        {
+            string consulta = "delete from ingreso where idingreso=" + id;
+            Conexion.Ejecutar(consulta);
+        }
+        public DataTable IngresoDatosDal()
+        {
+            string consulta = "SELECT        INGRESO.IDINGRESO, PROVEEDOR.NOMBRE, INGRESO.FECHAINGRESO, INGRESO.TOTAL, INGRESO.ESTADO\r\nFROM            INGRESO INNER JOIN\r\n                         PROVEEDOR ON INGRESO.IDPROVEEDOR = PROVEEDOR.IDPROVEEDOR";
+            return Conexion.EjecutarDataTabla(consulta, "fffff");
+        }
     }
 }

@@ -36,5 +36,10 @@ namespace SistemasVentas.VISTA.ClienteVistas
         {
 
         }
+
+        private void ClienteInsertarVista_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

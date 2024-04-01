@@ -53,8 +53,14 @@ namespace SistemasVentas.VISTA.VentaVista
             venta.IdVendedor = IdProveedorSeleccionada;
             venta.fecha = dateTimePicker1.Value;
             venta.Total = Convert.ToDecimal(textBox3.Text);
+            venta.Estado = textBox4.Text;
             bssv.InsertarVentaBss(venta);
             MessageBox.Show("Venta registrada");
+        }
+
+        private void VentaInsertarVista_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

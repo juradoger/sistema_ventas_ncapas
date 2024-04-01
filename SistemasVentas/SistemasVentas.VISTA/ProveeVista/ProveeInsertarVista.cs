@@ -29,8 +29,8 @@ namespace SistemasVentas.VISTA.ProveeVista
             ProductoListarVista fr = new ProductoListarVista();
             if (fr.ShowDialog() == DialogResult.OK)
             {
-                Producto producto = bssp.ObtenerIdPBss(IdProductoSeleccionada);
-                textBox1.Text = producto.Nombre.ToString();
+                /*Producto producto = bssp.ObtenerIdPBss(IdProductoSeleccionada);
+                textBox1.Text = producto.Nombre.ToString();*/
 
             }
         }

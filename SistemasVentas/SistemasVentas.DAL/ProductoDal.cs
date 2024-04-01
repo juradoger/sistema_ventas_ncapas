@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,6 +39,28 @@ namespace SistemasVentas.DAL
                 producto.Estado = tabla.Rows[0]["estado"].ToString();
             }
             return producto;
+        }
+        public void EditarProductoDal(Producto p)
+        {
+            string consulta = "update producto set idtipoprod=" + p.IdTipoProd + "," +
+                                                        "idmarca=" + p.IdMarca + "," +
+                                                        "nombre='" + p.Nombre + "'," +
+                                                        "codigobarra='" + p.CodigoBarra + "'," +
+                                                        "unidad=" + p.Unidad + "," +
+                                                        "descripcion='" + p.Descripcion + "'," +
+                                                        "estado='" + p.Estado + "' " +
+                                                "where idproducto=" + p.IdProducto;
+            Conexion.Ejecutar(consulta);
+        }
+        public void EliminarProductoDal(int id)
+        {
+            string consulta = "delete from producto where idproducto=" + id;
+            Conexion.Ejecutar(consulta);
+        }
+        public DataTable ProductoDatosDal()
+        {
+            string consulta = "SELECT        PRODUCTO.IDPRODUCTO, PRODUCTO.NOMBRE, PRODUCTO.CODIGOBARRA, PRODUCTO.DESCRIPCION, TIPOPROD.NOMBRE TIPOPRODUCTO, MARCA.NOMBRE MARCA, PRODUCTO.ESTADO\r\nFROM            PRODUCTO INNER JOIN\r\n                         TIPOPROD ON PRODUCTO.IDTIPOPROD = TIPOPROD.IDTIPOPROD INNER JOIN\r\n                         MARCA ON PRODUCTO.IDMARCA = MARCA.IDMARCA";
+            return Conexion.EjecutarDataTabla(consulta, "ssss");
         }
     }
 }

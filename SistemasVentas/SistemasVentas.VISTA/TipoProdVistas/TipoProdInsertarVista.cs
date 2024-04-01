@@ -23,8 +23,14 @@ namespace SistemasVentas.VISTA.TipoProdVistas
         {
             TipoProducto tp=new TipoProducto();
             tp.Nombre = textBox1.Text;
+            tp.Estado = textBox2.Text;
             bss.InsertarTipoProdBss(tp);
             MessageBox.Show("Exitoso!");
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

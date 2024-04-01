@@ -15,7 +15,7 @@ namespace SistemasVentas.DAL
         //al error cuando devuelves diferentes tipo de datos, se le llama error de compilacion
         public DataTable ListarPersonasDal()
         {
-            string consulta = "select * from persona";
+            string consulta = "select * from persona where estado = 'Activo'";
             //aqui llama a la funcion ejecutardatatabla
             DataTable lista = Conexion.EjecutarDataTabla(consulta, "tabla");
             return lista;
@@ -52,10 +52,12 @@ namespace SistemasVentas.DAL
             Conexion.Ejecutar(consulta);
         }
         public void EliminarPersonaDal(int id)
-        {
-            string consulta = "delete from persona where idpersona="+id;
-            Conexion.Ejecutar(consulta);
-
+        {            
+     //       string consulta = "delete from persona where idpersona="+id;
+       //     Conexion.Ejecutar(consulta);
+            string consul = "update persona set estado = 'Inactivo' where idpersona=" + id;
+            Conexion.Ejecutar(consul);
         }
+        
     }
 }

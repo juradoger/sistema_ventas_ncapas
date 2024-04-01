@@ -13,7 +13,7 @@ namespace SistemasVentas.DAL
         
         public static string CONECTAR
         {
-            get { return @"Data Source=LAPTOP-8ARPEK3R\SQLNAYELI; Initial Catalog=TIENDABD; Integrated Security=True; TrustServerCertificate=true;"; }
+            get { return @"Data Source=LAPTOP-8ARPEK3R\SQLNAYELI; Initial Catalog=TIENDADB; Integrated Security=True; TrustServerCertificate=true;"; }
         }
         public static DataSet EjecutarDataSet(string consulta)
         {

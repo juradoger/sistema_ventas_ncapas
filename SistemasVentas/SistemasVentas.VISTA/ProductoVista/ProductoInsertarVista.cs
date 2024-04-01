@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemasVentas.VISTA;
 
 namespace SistemasVentas.VISTA.ProductoVista
 {
@@ -57,6 +58,11 @@ namespace SistemasVentas.VISTA.ProductoVista
             prod.Descripcion = textBox6.Text.ToString();
             bsp.InsertarProductoBss(prod);
             MessageBox.Show("Producto registrado");
+        }
+
+        private void ProductoInsertarVista_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

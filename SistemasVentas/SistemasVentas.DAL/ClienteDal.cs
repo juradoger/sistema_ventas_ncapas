@@ -39,5 +39,21 @@ namespace SistemasVentas.DAL
             }
             return cliente;
         }
+        public void EditarClienteDal(Cliente c)
+        {
+            string consulta = $"update cliente set idpersona= '{c.IdPersona}', tipocliente= '{c.TipoCliente.ToString()}', codigocliente='{c.CodCliente.ToString()}', where idcliente='{c.IdCliente}'";
+            Conexion.Ejecutar(consulta);
+        }
+        public void EliminarClienteDal(int id)
+        {
+            string consulta = "delete from cliente where idcliente=" + id;
+            Conexion.Ejecutar(consulta);
+
+        }
+        public DataTable ClienteDatosDal()
+        {
+            string consulta = "SELECT        CLIENTE.IDCLIENTE, PERSONA.NOMBRE+' '+ PERSONA.APELLIDO NOMBREPERSONA,CLIENTE.TIPOCLIENTE, CLIENTE.CODIGOCLIENTE, CLIENTE.ESTADO\r\nFROM            CLIENTE INNER JOIN\r\n                         PERSONA ON CLIENTE.IDPERSONA = PERSONA.IDPERSONA";
+            return Conexion.EjecutarDataTabla(consulta, "sfef");
+        }
     }
 }

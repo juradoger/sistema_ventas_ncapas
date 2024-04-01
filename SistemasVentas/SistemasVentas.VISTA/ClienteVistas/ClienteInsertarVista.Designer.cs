@@ -120,6 +120,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ClienteInsertarVista";
             this.Text = "ClienteInsertarVista";
+            this.Load += new System.EventHandler(this.ClienteInsertarVista_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

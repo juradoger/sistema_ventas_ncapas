@@ -1,6 +1,5 @@
 ﻿using SistemasVentas.BSS;
 using SistemasVentas.Modelo;
-using SistemasVentas.VISTA.IngresoVistas;
 using SistemasVentas.VISTA.ProductoVistas;
 using SistemasVentas.VISTA.VentaVistas;
 using System;
@@ -12,33 +11,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace SistemasVentas.VISTA.DetalleVentaVista
+namespace SistemasVentas.VISTA.DetalleVentaVistas
 {
-    public partial class DetalleVentaInsertarVista : Form
+    public partial class DetalleVentaEditarVistas : Form
     {
-        public DetalleVentaInsertarVista()
+        int idx = 0;
+        DetalleVenta p = new DetalleVenta();
+        DetalleVentaBss bss = new DetalleVentaBss();
+        
+        public DetalleVentaEditarVistas(int idSeleccionada)
         {
+            idx = idSeleccionada;
             InitializeComponent();
+        }
+
+        private void DetalleVentaEditarVistas_Load(object sender, EventArgs e)
+        {
+
         }
         public static int IdVentaSeleccionada = 0;
         public static int IdProductoSeleccionada = 0;
-        VentaBss bss = new VentaBss();
+        VentaBss bssv = new VentaBss();
         private void button4_Click(object sender, EventArgs e)
         {
             VentaListarVista fr = new VentaListarVista();
             if (fr.ShowDialog() == DialogResult.OK)
             {
-                Venta venta = bss.ObtenerIdBss(IdVentaSeleccionada);
+                Venta venta = bssv.ObtenerIdBss(IdVentaSeleccionada);
                 textBox1.Text = venta.IdVenta.ToString();
 
             }
         }
         ProductoBss bssp = new ProductoBss();
-
         private void button5_Click(object sender, EventArgs e)
         {
+
             ProductoListarVista fr = new ProductoListarVista();
             if (fr.ShowDialog() == DialogResult.OK)
             {

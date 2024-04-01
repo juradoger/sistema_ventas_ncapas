@@ -42,8 +42,8 @@ namespace SistemasVentas.VISTA.DetalleIngVista
             ProductoListarVista fr = new ProductoListarVista();
             if (fr.ShowDialog() == DialogResult.OK)
             {
-                Producto producto = bssp.ObtenerIdPBss(IdProductoSeleccionada);
-                textBox2.Text = producto.Nombre.ToString();
+               // Producto producto = bssp.ObtenerIdPBss(IdProductoSeleccionada);
+              //  textBox2.Text = producto.Nombre.ToString();
 
             }
         }
@@ -60,6 +60,11 @@ namespace SistemasVentas.VISTA.DetalleIngVista
             detalle.Subtotal = Convert.ToDecimal(textBox7.Text);
             bsp.InsertarDetalleIngBss(detalle);
             MessageBox.Show("Detalle registrado");
+        }
+
+        private void DetalleIngeVista_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

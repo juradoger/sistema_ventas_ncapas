@@ -36,5 +36,19 @@ namespace SistemasVentas.DAL
             }
             return proveedor;
         }
+        public void EditarProveedorDal(Proveedor p)
+        {
+            string consulta = "update proveedor set nombre='" + p.Nombre + "'," +
+                                                        "telefono='" + p.Telefono + "'," +
+                                                        "direccion='" + p.Direccion + "'," +
+                                                        "estado='" + p.Estado + "' " +
+                                                "where idproveedor=" + p.IdProveedor;
+            Conexion.Ejecutar(consulta);
+        }
+        public void EliminarProveedorDal(int id)
+        {
+            string consulta = "delete from proveedor where idproveedor=" + id;
+            Conexion.Ejecutar(consulta);
+        }
     }
 }

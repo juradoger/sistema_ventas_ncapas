@@ -30,11 +30,34 @@ namespace SistemasVentas.DAL
             {
                 marca.IdMarca = Convert.ToInt32(tabla.Rows[0]["idmarca"]);
                 marca.Nombre = tabla.Rows[0]["nombre"].ToString();
-                marca.Telefono = tabla.Rows[0]["telefono"].ToString();
-                marca.Direccion = tabla.Rows[0]["direccion"].ToString();
                 marca.Estado = tabla.Rows[0]["estado"].ToString();
             }
             return marca;
+        }
+        Marca p = new Marca();
+        public Marca ObtenerMarcaIdDal(int id)
+        {
+            string consulta = "select * from marca where idmarca=" + id;
+            DataTable tabla = Conexion.EjecutarDataTabla(consulta, "asdas");
+            if (tabla.Rows.Count > 0)
+            {
+                p.IdMarca = Convert.ToInt32(tabla.Rows[0]["idmarca"]);
+                p.Nombre = tabla.Rows[0]["nombre"].ToString();
+                p.Estado = tabla.Rows[0]["estado"].ToString();
+            }
+            return p;
+        }
+        public void EditarMarcaDal(Marca p)
+        {
+            string consulta = "update marca set nombre='" + p.Nombre + "'," +
+                                                        "estado='" + p.Estado + "' " +
+                                                "where idmarca=" + p.IdMarca;
+            Conexion.Ejecutar(consulta);
+        }
+        public void EliminarMarcaDal(int id)
+        {
+            string consulta = "delete from marca where idmarca=" + id;
+            Conexion.Ejecutar(consulta);
         }
     }
 }

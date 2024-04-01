@@ -26,7 +26,7 @@ namespace SistemasVentas.VISTA.ProductoVistas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Producto pro = new Producto();
+            /*Producto pro = new Producto();
             pro.IdTipoProd = Convert.ToInt32(textBox1.Text);
             pro.IdMarca = Convert.ToInt32(textBox2.Text);
             pro.Nombre =textBox3.Text;
@@ -34,7 +34,7 @@ namespace SistemasVentas.VISTA.ProductoVistas
             pro.Unidad = Convert.ToInt32(textBox5.Text);
             pro.Descripcion=textBox6.Text;
             bss.InsertarProductoBss(pro);
-            MessageBox.Show("Producto Registrado!");
+            MessageBox.Show("Producto Registrado!");*/
 
 
 

@@ -36,11 +36,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(140, 161);
+            this.button1.Location = new System.Drawing.Point(75, 241);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(134, 25);
             this.button1.TabIndex = 0;
@@ -53,9 +57,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(75, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 15);
+            this.label1.Size = new System.Drawing.Size(56, 15);
             this.label1.TabIndex = 1;
-            this.label1.Text = "IDUSUARIO";
+            this.label1.Text = "USUARIO";
             // 
             // textBox1
             // 
@@ -69,14 +73,14 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(75, 106);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 15);
+            this.label2.Size = new System.Drawing.Size(29, 15);
             this.label2.TabIndex = 3;
-            this.label2.Text = "IDROL";
+            this.label2.Text = "ROL";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(348, 54);
+            this.label3.Location = new System.Drawing.Point(75, 198);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(118, 15);
             this.label3.TabIndex = 4;
@@ -99,16 +103,56 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(472, 51);
+            this.dateTimePicker1.Location = new System.Drawing.Point(213, 192);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
             this.dateTimePicker1.TabIndex = 8;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(174, 143);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 23);
+            this.textBox3.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(75, 151);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 15);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "ESTADO";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(322, 49);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(134, 25);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "SELECCIONAR";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(322, 96);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(134, 25);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "SELECCIONAR";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // UsuarioRolInsertarVista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label4);
@@ -119,6 +163,7 @@
             this.Controls.Add(this.button1);
             this.Name = "UsuarioRolInsertarVista";
             this.Text = "UsuarioRolInsertarVista";
+            this.Load += new System.EventHandler(this.UsuarioRolInsertarVista_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,5 +179,9 @@
         private Label label4;
         private TextBox textBox2;
         private DateTimePicker dateTimePicker1;
+        private TextBox textBox3;
+        private Label label5;
+        private Button button2;
+        private Button button3;
     }
 }

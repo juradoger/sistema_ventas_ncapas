@@ -46,5 +46,10 @@ namespace SistemasVentas.VISTA.ClienteVista
             bssc.InsertarClienteBss(cliente);
             MessageBox.Show("Cliente registrado");
         }
+
+        private void ClienteInsertarVista_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

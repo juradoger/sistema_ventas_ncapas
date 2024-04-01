@@ -224,6 +224,7 @@
             this.Controls.Add(this.label1);
             this.Name = "DetalleIngeVista";
             this.Text = "DetalleIngeVista";
+            this.Load += new System.EventHandler(this.DetalleIngeVista_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

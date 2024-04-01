@@ -26,8 +26,14 @@ namespace SistemasVentas.VISTA.VentaVistas
             vet.IdVendedor=Convert.ToInt32(textBox2.Text);
             vet.fecha = dateTimePicker1.Value;
             vet.Total=Convert.ToDecimal(textBox3.Text);
+            vet.Estado = textBox4.Text;
             bss.InsertarVentaBss(vet);
             MessageBox.Show("Venta registrada!!");
+        }
+
+        private void VentaInsertarVista_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
